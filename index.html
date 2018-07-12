@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>NFL GIPHY App</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+</head>
+
+
+<body>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Train Boiz</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Trainz</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Frequency</th>
+          <th scope="col">Next Arrival</th>
+          <th scope="col">Minutes Away</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Insert movie rows here -->
+      </tbody>
+    </table>
+  </div>
+
+  <form>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-s-12 col-m-12 col-lg-12 search-form">
+          <form id="search-form">
+            <label for="search-input">Name</label>
+            <br>
+            <input type="text" id="name-input">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-12 col-s-12 col-m-12 col-lg-12 search-form">
+          <form id="search-form">
+            <label for="search-input">Destination</label>
+            <br>
+            <input type="text" id="role-input">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-12 col-s-12 col-m-12 col-lg-12 search-form">
+          <form id="search-form">
+            <label for="search-input">First Train Time (HH:mm 24hr clock)</label>
+            <br>
+            <input type="text" id="start-input">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-12 col-s-12 col-m-12 col-lg-12 search-form">
+          <form id="search-form">
+            <label for="search-input">Frequency (mins)</label>
+            <br>
+            <input type="text" id="rate-input">
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-xs-12 col-s-12 col-m-12 col-lg-12 search-form">
+          <input id="submit" type="submit" value="Submit">
+        </div>
+      </div>
+    </div>
+  </form>
