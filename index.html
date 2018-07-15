@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
 </head>
 
 
@@ -21,19 +23,19 @@
 
   <div class="container">
     <h2>Trainz</h2>
-    <table class="table">
+    <h2 id="currentTime"></h2>
+    <table class="table" id= "trainSchedule">
       <thead>
         <tr>
           <th scope="col">Name</th>
           <th scope="col">Destination</th>
-          <th scope="col">Frequency</th>
+          <th scope="col">Frequency (mins)</th>
           <th scope="col">Next Arrival</th>
           <th scope="col">Minutes Away</th>
-
         </tr>
       </thead>
       <tbody>
-        <!-- Insert movie rows here -->
+        <!-- Insert trains here -->
       </tbody>
     </table>
   </div>
@@ -61,18 +63,18 @@
       <div class="row">
         <div class="col-xs-12 col-s-12 col-m-12 col-lg-12 search-form">
           <form id="search-form">
-            <label for="start-input">First Train Time (HH:mm 24hr clock)</label>
+            <label for="start-input">Frequency (mins)</label>
             <br>
-            <input type="text" id="start-input">
+            <input type="text" id="frequency-input">
         </div>
       </div>
       <br>
       <div class="row">
         <div class="col-xs-12 col-s-12 col-m-12 col-lg-12 search-form">
           <form id="search-form">
-            <label for="search-input">Frequency (mins)</label>
+            <label for="search-input">First Train Time</label>
             <br>
-            <input type="text" id="frequency-input">
+            <input type="text" id="start-input">
         </div>
       </div>
       <br>
@@ -84,3 +86,9 @@
       </div>
     </div>
   </form>
+  
+  
+  <script src="assets/js/script.js"></script>
+
+</body>
+</html>
