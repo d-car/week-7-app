@@ -23,32 +23,33 @@ function displayTime() {
   setTimeout(displayTime, 1000);
 }
 
-// database.ref().on("child_added", function(snapshot) {
+database.ref().on("child_added", function(snapshot) {
   
-//     // Get reference to existing tbody element, create a new table row element
-//     var tBody = $("tbody");
-//     var tRow = $("<tr>");
-    
+  // Get reference to existing tbody element, create a new table row element
+  var tBody = $("tbody");
+  var tRow = $("<tr>");
+  
 
-//     // Methods run on jQuery selectors return the selector they we run on
-//     // This is why we can create and save a reference to a td in the same statement we update its text
-//     var trainNameTd = $("<td>").text(snapshot.val().trainName);
-//     var trainDestinationTd = $("<td>").text(snapshot.val().trainDestination);
-//     var trainFrequencyTd = $("<td>").text(snapshot.val().trainFrequency);
-//     var trainBeginTd = $("<td>").text(snapshot.val().trainBegin);
-
-    
-   
+  // Methods run on jQuery selectors return the selector they we run on
+  // This is why we can create and save a reference to a td in the same statement we update its text
+  var trainNameTd = $("<td>").text(snapshot.val().trainName);
+  var trainDestinationTd = $("<td>").text(snapshot.val().trainDestination);
+  var trainFrequencyTd = $("<td>").text(snapshot.val().trainFrequency);
+  var trainBeginTd = $("<td>").text(snapshot.val().trainBegin);
 
 
-//     // Append the newly created table data to the table row
-//     tRow.append(trainNameTd, trainDestinationTd, trainFrequencyTd);
-//     //  nextTrainTd, minutesAwayTd);
+  
+ 
 
-//     // Append the table row to the table body
-//     tBody.append(tRow);
 
-// });
+  // Append the newly created table data to the table row
+  tRow.append(trainNameTd, trainDestinationTd, trainFrequencyTd,);
+  //  nextTrainTd, minutesAwayTd);
+
+  // Append the table row to the table body
+  tBody.append(tRow);
+
+});
 
 // Capture Button Click
 $("#submit").on("click", function(event) {
@@ -94,32 +95,7 @@ $("#submit").on("click", function(event) {
 
 });
 
-database.ref().on("child_added", function(snapshot) {
-  
-  // Get reference to existing tbody element, create a new table row element
-  var tBody = $("tbody");
-  var tRow = $("<tr>");
-  
 
-  // Methods run on jQuery selectors return the selector they we run on
-  // This is why we can create and save a reference to a td in the same statement we update its text
-  var trainNameTd = $("<td>").text(snapshot.val().trainName);
-  var trainDestinationTd = $("<td>").text(snapshot.val().trainDestination);
-  var trainFrequencyTd = $("<td>").text(snapshot.val().trainFrequency);
-  var trainBeginTd = $("<td>").text(snapshot.val().trainBegin);
-
-  
- 
-
-
-  // Append the newly created table data to the table row
-  tRow.append(trainNameTd, trainDestinationTd, trainFrequencyTd);
-  //  nextTrainTd, minutesAwayTd);
-
-  // Append the table row to the table body
-  tBody.append(tRow);
-
-});
 
 $(document).ready(function() {
   displayTime();
