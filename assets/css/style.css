@@ -1,3 +1,33 @@
-#currentTime {
-    float: left;
+table {
+    background-color: #fff;
+}
+
+body {
+    background-image: url("../images/trainbackground.jpg");
+}
+
+#wb {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#name-input {
+    margin: auto;
+    width: 50%;
+}
+
+#destination-input {
+    margin: auto;
+    width: 50%;
+}
+
+#frequency-input {
+    margin: auto;
+    width: 50%;
+}
+
+#start-input {
+    margin: auto;
+    width: 50%;
 }
